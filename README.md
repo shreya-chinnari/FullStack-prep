@@ -1,2 +1,0 @@
-# FullStack-prep
-FrontEnd + BackEnd
