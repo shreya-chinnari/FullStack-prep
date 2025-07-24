@@ -23,7 +23,7 @@ console.log(typeof nanValue); // ✅ number (weird quirk in JS)
 // =======================
 // 3. BIGINT (for very large integers)
 // =======================
-let bigIntVal = 1234567890123456789012345678901234567890n;
+let bigIntVal = 1234567890123456789012345678901234567890n; // 'n' at the end indicates a BigInt
 console.log(typeof bigIntVal); // ✅ bigint
 
 // =======================
@@ -59,6 +59,12 @@ console.log(typeof emptyValue); // ❗️object (this is a known bug in JS)
 let sym = Symbol("id");
 console.log(typeof sym); // ✅ symbol
 
+// uniqueness
+const x = Symbol("1234");
+const y = Symbol("1234");
+
+console.log(x === y); // false, even though descriptions are the same
+
 // =======================
 // 8. OBJECT (non-primitive)
 // =======================
@@ -78,7 +84,7 @@ console.log(Array.isArray(arr)); // ✅ true (use this to check array)
 function greet() {
 	return "Hello!";
 }
-console.log(typeof greet); // ✅ function
+console.log(typeof greet); // ✅ function {function-object}
 
 // =======================
 // 11. DATE (also object)
@@ -91,3 +97,4 @@ console.log(typeof today); // ✅ object
 // =======================
 console.log(typeof null); // ❗️"object" — historical bug
 console.log(typeof undefined); // ✅ "undefined"
+
