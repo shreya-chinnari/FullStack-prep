@@ -20,7 +20,7 @@ console.log(greet.length); // ➤ 1 — number of parameters
 	An object which contains a function as a method.
 */
 
-// FUNCTION THAT RETURNS AN OBJECT
+// FUNCTION THAT RETURNS AN
 function getUser() {
 	return {
 		name: "Sachi",
